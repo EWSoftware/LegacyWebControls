@@ -1,0 +1,2309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.35" Name="EWSoftware.Web.Controls">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">http://www.gotdotnet.com/team/fxcop//xsl/1.35/FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-us" />
+  <VersionAware>False</VersionAware>
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/bin/Debug/EWSoftware.Web.Controls.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="False">
+    <Rule Name="AvoidDuplicateAccelerators" Enabled="True" />
+    <Rule Name="DoNotHardcodeLocaleSpecificStrings" Enabled="True" />
+    <Rule Name="SetLocaleForDataTypes" Enabled="True" />
+    <Rule Name="SpecifyCultureInfo" Enabled="True" />
+    <Rule Name="SpecifyIFormatProvider" Enabled="True" />
+    <Rule Name="SpecifyMessageBoxOptions" Enabled="True" />
+   </RuleFile>
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="False">
+    <Rule Name="AvoidLanguageSpecificTypeNamesInParameters" Enabled="True" />
+    <Rule Name="AvoidTypeNamesInParameters" Enabled="True" />
+    <Rule Name="CompoundWordsShouldBeCasedCorrectly" Enabled="True" />
+    <Rule Name="DoNotNameEnumValuesReserved" Enabled="True" />
+    <Rule Name="DoNotPrefixEnumValuesWithTypeName" Enabled="True" />
+    <Rule Name="EventsShouldNotHaveBeforeOrAfterPrefix" Enabled="True" />
+    <Rule Name="FlagsEnumsShouldHavePluralNames" Enabled="True" />
+    <Rule Name="IdentifiersShouldBeCasedCorrectly" Enabled="True" />
+    <Rule Name="IdentifiersShouldDifferByMoreThanCase" Enabled="True" />
+    <Rule Name="IdentifiersShouldHaveCorrectPrefix" Enabled="True" />
+    <Rule Name="IdentifiersShouldHaveCorrectSuffix" Enabled="True" />
+    <Rule Name="IdentifiersShouldNotContainUnderscores" Enabled="True" />
+    <Rule Name="IdentifiersShouldNotHaveIncorrectPrefix" Enabled="True" />
+    <Rule Name="IdentifiersShouldNotHaveIncorrectSuffix" Enabled="True" />
+    <Rule Name="IdentifiersShouldNotMatchKeywords" Enabled="True" />
+    <Rule Name="LongAcronymsShouldBePascalCased" Enabled="True" />
+    <Rule Name="OnlyFlagsEnumsShouldHavePluralNames" Enabled="True" />
+    <Rule Name="ParameterNamesShouldMatchBaseDeclaration" Enabled="True" />
+    <Rule Name="ParameterNamesShouldNotMatchMemberNames" Enabled="True" />
+    <Rule Name="PropertyNamesShouldNotMatchGetMethods" Enabled="True" />
+    <Rule Name="ResourceStringCompoundWordsShouldBeCasedCorrectly" Enabled="True" />
+    <Rule Name="ResourceStringsShouldBeSpelledCorrectly" Enabled="True" />
+    <Rule Name="ShortAcronymsShouldBeUppercase" Enabled="True" />
+    <Rule Name="TypeNamesShouldNotMatchNamespaces" Enabled="True" />
+    <Rule Name="UsePreferredTerms" Enabled="True" />
+   </RuleFile>
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.35">
+  <Targets>
+   <Target Name="$(ProjectDir)/bin/Debug/EWSoftware.Web.Controls.dll">
+    <Modules>
+     <Module Name="ewsoftware.web.controls.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Excluded" Created="2006-02-16 16:32:27Z">
+        <Issue Name="NoStrongName">
+         <Item>EWSoftware.Web.Controls</Item>
+        </Issue>
+        <Notes>
+         <User Name="EWOODRUFF">
+          <Note Id="0" />
+         </User>
+        </Notes>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="EWSoftware.Web.Controls">
+        <Types>
+         <Type Name="AddToFavorites">
+          <Members>
+           <Member Name="FavoritesURL">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>AddToFavorites.FavoritesURL:String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="IEToolTip">
+            <Messages>
+             <Message Id="ToolTip" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="ShouldBeDiscreteTerm">
+               <Item>ToolTip</Item>
+               <Item>property</Item>
+               <Item>IEToolTip</Item>
+               <Item>Tooltip</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="4" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CardTypes">
+          <Members>
+           <Member Name="enRoute">
+            <Messages>
+             <Message Id="Member" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>enRoute</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="5" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>en</Item>
+               <Item>CardTypes.enRoute</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="11" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="JCB">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>CardTypes.JCB</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="VISA">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>CardTypes.VISA</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CCTypeDropDownList">
+          <Members>
+           <Member Name="CreditCardCtlID">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="MemberId">
+               <Item>CCTypeDropDownList.CreditCardCtlID:String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="11" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="Ctl" TypeName="LiteralsShouldBeSpelledCorrectly" Category="Microsoft.Usage" CheckId="CA2204" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>Ctl</Item>
+               <Item>CreditCardCtlID</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="6" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>CCTypeDropDownList.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CCTypeDropDownList.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CompareTextBox">
+          <Members>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>CompareTextBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConfirmLinkButton">
+          <Members>
+           <Member Name="AddAttributesToRender(System.Web.UI.HtmlTextWriter):System.Void">
+            <Messages>
+             <Message Id="System.Int16.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>ConfirmLinkButton.AddAttributesToRender(HtmlTextWriter):Void</Item>
+               <Item>System.Int16.ToString</Item>
+               <Item>System.Int16.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CreditCardTextBox">
+          <Members>
+           <Member Name="CardTypeCtlID">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="MemberId">
+               <Item>CreditCardTextBox.CardTypeCtlID:String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="11" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>CreditCardTextBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CreditCardValidator">
+          <Members>
+           <Member Name="AddAttributesToRender(System.Web.UI.HtmlTextWriter):System.Void">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CreditCardValidator.AddAttributesToRender(HtmlTextWriter):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CardTypeCtlID">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="MemberId">
+               <Item>CreditCardValidator.CardTypeCtlID:String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="11" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EvaluateIsValid():System.Boolean">
+            <Messages>
+             <Message Id="Ctl" TypeName="LiteralsShouldBeSpelledCorrectly" Category="Microsoft.Usage" CheckId="CA2204" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>Ctl</Item>
+               <Item>CardTypeCtlID</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="6" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CreditCardValidator.EvaluateIsValid():Boolean</Item>
+               <Item>System.Int32.Parse(System.String)</Item>
+               <Item>System.Int32.Parse(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>CreditCardValidator.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="TestChecksum(System.String):System.Boolean">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CreditCardValidator.TestChecksum(String):Boolean</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CtrlUtils">
+          <Members>
+           <Member Name="OnAllUCMatch(System.Text.RegularExpressions.Match):System.String">
+            <Messages>
+             <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CtrlUtils.OnAllUCMatch(Match):String</Item>
+               <Item>System.String.ToUpper</Item>
+               <Item>System.String.ToUpper(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnApostMatch(System.Text.RegularExpressions.Match):System.String">
+            <Messages>
+             <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CtrlUtils.OnApostMatch(Match):String</Item>
+               <Item>System.String.ToLower</Item>
+               <Item>System.String.ToLower(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnMcMatch(System.Text.RegularExpressions.Match):System.String">
+            <Messages>
+             <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CtrlUtils.OnMcMatch(Match):String</Item>
+               <Item>System.String.ToUpper</Item>
+               <Item>System.String.ToUpper(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnWordMatch(System.Text.RegularExpressions.Match):System.String">
+            <Messages>
+             <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CtrlUtils.OnWordMatch(Match):String</Item>
+               <Item>System.String.ToUpper</Item>
+               <Item>System.String.ToUpper(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OpenWindowJS(System.String,EWSoftware.Web.Controls.WindowTarget,System.Int32,System.Int32,System.Int32,System.Int32,EWSoftware.Web.Controls.WindowOptions,System.Boolean,System.String):System.String">
+            <Messages>
+             <Message Id="0#" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Parameter">
+               <Item>strURL</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CtrlUtils.OpenWindowJS(String, WindowTarget, Int32, Int32, Int32, Int32, WindowOptions, Boolean, String):String</Item>
+               <Item>System.String.ToLower</Item>
+               <Item>System.String.ToLower(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Issue>
+               <Item>CtrlUtils.OpenWindowJS(String, WindowTarget, Int32, Int32, Int32, Int32, WindowOptions, Boolean, String):String</Item>
+               <Item>System.String.ToLower</Item>
+               <Item>System.String.ToLower(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ReplaceParameters(System.String,System.String[]):System.String">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>'strMsg'</Item>
+               <Item>CtrlUtils.ReplaceParameters(String, String[]):String</Item>
+              </Issue>
+              <Issue>
+               <Item>'strReplace'</Item>
+               <Item>CtrlUtils.ReplaceParameters(String, String[]):String</Item>
+              </Issue>
+              <Issue>
+               <Item>'strReplace'</Item>
+               <Item>CtrlUtils.ReplaceParameters(String, String[]):String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="17" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToProperCase(System.String,System.String):System.String">
+            <Messages>
+             <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CtrlUtils.ToProperCase(String, String):String</Item>
+               <Item>System.String.ToLower</Item>
+               <Item>System.String.ToLower(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DateTextBox">
+          <Members>
+           <Member Name="MaximumDate">
+            <Accessors>
+             <Accessor Name="get_MaximumDate():System.DateTime">
+              <Messages>
+               <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.get_MaximumDate():DateTime</Item>
+                 <Item>System.DateTime.Parse(System.String)</Item>
+                 <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_MaximumDate(System.DateTime):System.Void">
+              <Messages>
+               <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_MaximumDate(DateTime):Void</Item>
+                 <Item>System.DateTime.Parse(System.String)</Item>
+                 <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_MaximumDate(DateTime):Void</Item>
+                 <Item>System.DateTime.ToString(System.String)</Item>
+                 <Item>System.DateTime.ToString(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="MinimumDate">
+            <Accessors>
+             <Accessor Name="get_MinimumDate():System.DateTime">
+              <Messages>
+               <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.get_MinimumDate():DateTime</Item>
+                 <Item>System.DateTime.Parse(System.String)</Item>
+                 <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_MinimumDate(System.DateTime):System.Void">
+              <Messages>
+               <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_MinimumDate(DateTime):Void</Item>
+                 <Item>System.DateTime.Parse(System.String)</Item>
+                 <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_MinimumDate(DateTime):Void</Item>
+                 <Item>System.DateTime.ToString(System.String)</Item>
+                 <Item>System.DateTime.ToString(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Text">
+            <Accessors>
+             <Accessor Name="set_Text(System.String):System.Void">
+              <Messages>
+               <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_Text(String):Void</Item>
+                 <Item>System.Object</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="13" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_Text(String):Void</Item>
+                 <Item>System.DateTime.Parse(System.String)</Item>
+                 <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>DateTextBox.set_Text(String):Void</Item>
+                 <Item>System.String.Format(System.String,System.Object)</Item>
+                 <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="ToDateTime():System.DateTime">
+            <Messages>
+             <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>DateTextBox.ToDateTime():DateTime</Item>
+               <Item>System.DateTime.Parse(System.String)</Item>
+               <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EWSCheckBoxList">
+          <Messages>
+           <Message TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>EWSCheckBoxList</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="7" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="CurrentSelections">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CurrentSelections</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="9" />
+               </User>
+              </Notes>
+             </Message>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSCheckBoxList.CurrentSelections:String[]</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="10" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="DefaultSelections">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSCheckBoxList.DefaultSelections:String[]</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="10" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetIndexOrSetDefault():System.Int32">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Certainty="50">
+               <Item>GetIndexOrSetDefault</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="12" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDefaultSelected(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSCheckBoxList.OnDefaultSelected(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSCheckBoxList.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SelectedIndices">
+            <Messages>
+             <Message Id="Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>Indices</Item>
+               <Item>SelectedIndices</Item>
+               <Item>Indexes</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="3" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="get_SelectedIndices():EWSoftware.Web.Controls.SelectedIndicesCollection">
+              <Messages>
+               <Message Id="Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue Name="Member">
+                 <Item>Indices</Item>
+                 <Item>get_SelectedIndices</Item>
+                 <Item>Indexes</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="3" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EWSDropDownList">
+          <Messages>
+           <Message TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>EWSDropDownList</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="7" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="GetIndexOrSetDefault():System.Int32">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Certainty="50">
+               <Item>GetIndexOrSetDefault</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="12" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDefaultSelected(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSDropDownList.OnDefaultSelected(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSDropDownList.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SetSelectionByText(System.String,System.String,System.Boolean):System.Void">
+            <Messages>
+             <Message Id="System.String.Compare(System.String,System.String,System.Boolean)" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSDropDownList.SetSelectionByText(String, String, Boolean):Void</Item>
+               <Item>System.String.Compare(System.String,System.String,System.Boolean)</Item>
+               <Item>System.String.Compare(System.String,System.String,System.Boolean,System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EWSListBox">
+          <Messages>
+           <Message TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>EWSListBox</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="7" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="CurrentSelections">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>CurrentSelections</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="9" />
+               </User>
+              </Notes>
+             </Message>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSListBox.CurrentSelections:String[]</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="10" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="set_CurrentSelections(System.String[]):System.Void">
+              <Messages>
+               <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>EWSListBox.set_CurrentSelections(String[]):Void</Item>
+                 <Item>System.Int32.ToString</Item>
+                 <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="DefaultSelections">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSListBox.DefaultSelections:String[]</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="10" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetIndexOrSetDefault():System.Int32">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSListBox.GetIndexOrSetDefault():Int32</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Certainty="50">
+               <Item>GetIndexOrSetDefault</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="12" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDefaultSelected(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSListBox.OnDefaultSelected(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSListBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SelectedIndices">
+            <Messages>
+             <Message Id="Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>Indices</Item>
+               <Item>SelectedIndices</Item>
+               <Item>Indexes</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="3" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="get_SelectedIndices():EWSoftware.Web.Controls.SelectedIndicesCollection">
+              <Messages>
+               <Message Id="Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue Name="Member">
+                 <Item>Indices</Item>
+                 <Item>get_SelectedIndices</Item>
+                 <Item>Indexes</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="3" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="SetSelectionByText(System.String,System.String,System.Boolean):System.Void">
+            <Messages>
+             <Message Id="System.String.Compare(System.String,System.String,System.Boolean)" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSListBox.SetSelectionByText(String, String, Boolean):Void</Item>
+               <Item>System.String.Compare(System.String,System.String,System.Boolean)</Item>
+               <Item>System.String.Compare(System.String,System.String,System.Boolean,System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EWSRadioButtonList">
+          <Messages>
+           <Message TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>EWSRadioButtonList</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="7" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="GetIndexOrSetDefault():System.Int32">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Certainty="50">
+               <Item>GetIndexOrSetDefault</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="12" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDefaultSelected(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSRadioButtonList.OnDefaultSelected(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSRadioButtonList.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EWSTextBox">
+          <Messages>
+           <Message TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>EWSTextBox</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="7" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="MaxLength">
+            <Accessors>
+             <Accessor Name="set_MaxLength(System.Int32):System.Void">
+              <Messages>
+               <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>EWSTextBox.set_MaxLength(Int32):Void</Item>
+                 <Item>System.String.Format(System.String,System.Object)</Item>
+                 <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>EWSTextBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSTextBox.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Text">
+            <Accessors>
+             <Accessor Name="set_Text(System.String):System.Void">
+              <Messages>
+               <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>EWSTextBox.set_Text(String):Void</Item>
+                 <Item>System.String.ToLower</Item>
+                 <Item>System.String.ToLower(System.Globalization.CultureInfo)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>EWSTextBox.set_Text(String):Void</Item>
+                 <Item>System.String.ToUpper</Item>
+                 <Item>System.String.ToUpper(System.Globalization.CultureInfo)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FileLink">
+          <Members>
+           <Member Name="CreateChildControls():System.Void">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>FileLink.CreateChildControls():Void</Item>
+               <Item>System.Object</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="13" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>FileLink.CreateChildControls():Void</Item>
+               <Item>System.String.Format(System.String,System.Object)</Item>
+               <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+              </Issue>
+              <Issue>
+               <Item>FileLink.CreateChildControls():Void</Item>
+               <Item>System.String.Format(System.String,System.Object)</Item>
+               <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+              </Issue>
+              <Issue>
+               <Item>FileLink.CreateChildControls():Void</Item>
+               <Item>System.String.Format(System.String,System.Object)</Item>
+               <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToolTip">
+            <Messages>
+             <Message Id="ToolTip" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="ShouldBeDiscreteTerm">
+               <Item>ToolTip</Item>
+               <Item>property</Item>
+               <Item>ToolTip</Item>
+               <Item>Tooltip</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="4" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="URL">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>FileLink.URL:String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GridDropDownList">
+          <Members>
+           <Member Name="OnCommand(System.Web.UI.WebControls.CommandEventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>GridDropDownList.OnCommand(CommandEventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnDefaultSelected(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>GridDropDownList.OnDefaultSelected(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnSelectedIndexChanged(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>GridDropDownList.OnSelectedIndexChanged(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MaskTextBox">
+          <Members>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>MaskTextBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MinMaxCheckBoxList">
+          <Members>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>MinMaxCheckBoxList.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>MinMaxCheckBoxList.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>MinMaxCheckBoxList.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MinMaxListBox">
+          <Members>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>MinMaxListBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>MinMaxListBox.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>MinMaxListBox.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MinMaxListValidator">
+          <Members>
+           <Member Name="AddAttributesToRender(System.Web.UI.HtmlTextWriter):System.Void">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>MinMaxListValidator.AddAttributesToRender(HtmlTextWriter):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>MinMaxListValidator.AddAttributesToRender(HtmlTextWriter):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>MinMaxListValidator.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NumericTextBox">
+          <Members>
+           <Member Name="CreateChildControls():System.Void">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>NumericTextBox.CreateChildControls():Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>NumericTextBox.CreateChildControls():Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="DecimalPlaces">
+            <Accessors>
+             <Accessor Name="set_DecimalPlaces(System.Int32):System.Void">
+              <Messages>
+               <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>NumericTextBox.set_DecimalPlaces(Int32):Void</Item>
+                 <Item>System.String.Format(System.String,System.Object)</Item>
+                 <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="MaximumValue">
+            <Accessors>
+             <Accessor Name="set_MaximumValue(System.String):System.Void">
+              <Messages>
+               <Message Id="dTemp" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>NumericTextBox.set_MaximumValue(String):Void</Item>
+                 <Item>dTemp</Item>
+                 <Item>System.Decimal</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="1" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.Decimal.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>NumericTextBox.set_MaximumValue(String):Void</Item>
+                 <Item>System.Decimal.Parse(System.String)</Item>
+                 <Item>System.Decimal.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="MinimumValue">
+            <Accessors>
+             <Accessor Name="set_MinimumValue(System.String):System.Void">
+              <Messages>
+               <Message Id="dTemp" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>NumericTextBox.set_MinimumValue(String):Void</Item>
+                 <Item>dTemp</Item>
+                 <Item>System.Decimal</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="1" />
+                 </User>
+                </Notes>
+               </Message>
+               <Message Id="System.Decimal.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+                <Issue>
+                 <Item>NumericTextBox.set_MinimumValue(String):Void</Item>
+                 <Item>System.Decimal.Parse(System.String)</Item>
+                 <Item>System.Decimal.Parse(System.String,System.IFormatProvider)</Item>
+                </Issue>
+                <Notes>
+                 <User Name="EWOODRUFF">
+                  <Note Id="2" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>NumericTextBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>NumericTextBox.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>NumericTextBox.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>NumericTextBox.OnPreRender(EventArgs):Void</Item>
+               <Item>System.Int32.ToString</Item>
+               <Item>System.Int32.ToString(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToDecimal():System.Decimal">
+            <Messages>
+             <Message Id="System.Decimal.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>NumericTextBox.ToDecimal():Decimal</Item>
+               <Item>System.Decimal.Parse(System.String)</Item>
+               <Item>System.Decimal.Parse(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToDouble():System.Double">
+            <Messages>
+             <Message Id="System.Double.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>NumericTextBox.ToDouble():Double</Item>
+               <Item>System.Double.Parse(System.String)</Item>
+               <Item>System.Double.Parse(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToInteger():System.Int32">
+            <Messages>
+             <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>NumericTextBox.ToInteger():Int32</Item>
+               <Item>System.Int32.Parse(System.String)</Item>
+               <Item>System.Int32.Parse(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NumericType">
+          <Messages>
+           <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Excluded" Created="2006-02-16 16:32:27Z" FixCategory="NonBreaking">
+            <Issue Name="NotFlagsNoZeroValue">
+             <Item>NumericType</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="14" />
+             </User>
+            </Notes>
+           </Message>
+           <Message TypeName="MarkEnumsWithFlags" Category="Microsoft.Design" CheckId="CA1027" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue>
+             <Item>NumericType</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="8" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="PatternTextBox">
+          <Members>
+           <Member Name="OnPreRender(System.EventArgs):System.Void">
+            <Messages>
+             <Message Id="0#" TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Security">
+               <Item>PatternTextBox.OnPreRender(EventArgs):Void</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="18" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToBoolean():System.Boolean">
+            <Messages>
+             <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>PatternTextBox.ToBoolean():Boolean</Item>
+               <Item>System.String.ToUpper</Item>
+               <Item>System.String.ToUpper(System.Globalization.CultureInfo)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ToDateTime():System.DateTime">
+            <Messages>
+             <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>PatternTextBox.ToDateTime():DateTime</Item>
+               <Item>System.DateTime.Parse(System.String)</Item>
+               <Item>System.DateTime.Parse(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PatternType">
+          <Members>
+           <Member Name="AreaPhNoExt">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>Ph</Item>
+               <Item>PatternType.AreaPhNoExt</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="11" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EMail">
+            <Messages>
+             <Message Id="EMail" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="ShouldBeDiscreteTerm">
+               <Item>EMail</Item>
+               <Item>field</Item>
+               <Item>EMail</Item>
+               <Item>Email</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="4" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SSN">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>PatternType.SSN</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="StPosProv">
+            <Messages>
+             <Message Id="Member" TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>St</Item>
+               <Item>PatternType.StPosProv</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="11" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="UNC">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>PatternType.UNC</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="URL">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>PatternType.URL</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ZIP">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>PatternType.ZIP</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SelectedIndicesCollection">
+          <Messages>
+           <Message TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010" Created="2006-02-16 16:32:27Z">
+            <Issue>
+             <Item>SelectedIndicesCollection</Item>
+             <Item>ICollection</Item>
+            </Issue>
+           </Message>
+           <Message Id="Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>Indices</Item>
+             <Item>SelectedIndicesCollection</Item>
+             <Item>Indexes</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="3" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="CopyTo(System.Int32[],System.Int32):System.Void">
+            <Messages>
+             <Message Id="0#Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Parameter">
+               <Item>SelectedIndicesCollection.CopyTo(Int32[], Int32):Void</Item>
+               <Item>Indices</Item>
+               <Item>nIndices</Item>
+               <Item>Indexes</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="3" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SelectedIndicesEnumerator">
+          <Messages>
+           <Message Id="Indices" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>Indices</Item>
+             <Item>SelectedIndicesEnumerator</Item>
+             <Item>Indexes</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="3" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor(EWSoftware.Web.Controls.SelectedIndicesCollection)">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>'siItems'</Item>
+               <Item>SelectedIndicesEnumerator.SelectedIndicesEnumerator(SelectedIndicesCollection)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="16" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SelectedItemsCollection">
+          <Messages>
+           <Message TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010" Created="2006-02-16 16:32:27Z">
+            <Issue>
+             <Item>SelectedItemsCollection</Item>
+             <Item>ICollection</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="SelectedItemsEnumerator">
+          <Members>
+           <Member Name=".ctor(EWSoftware.Web.Controls.SelectedItemsCollection)">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>'liItems'</Item>
+               <Item>SelectedItemsEnumerator.SelectedItemsEnumerator(SelectedItemsCollection)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="15" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowOpener">
+          <Members>
+           <Member Name="ToolTip">
+            <Messages>
+             <Message Id="ToolTip" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="ShouldBeDiscreteTerm">
+               <Item>ToolTip</Item>
+               <Item>property</Item>
+               <Item>ToolTip</Item>
+               <Item>Tooltip</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="4" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="URL">
+            <Messages>
+             <Message Id="Member" TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="Member">
+               <Item>WindowOpener.URL:String</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowOptions">
+          <Members>
+           <Member Name="Scrollbars">
+            <Messages>
+             <Message Id="Scrollbars" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="ShouldBeCompoundWord">
+               <Item>Scrollbars</Item>
+               <Item>field</Item>
+               <Item>Scrollbars</Item>
+               <Item>ScrollBars</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="4" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Toolbar">
+            <Messages>
+             <Message Id="Toolbar" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue Name="ShouldBeCompoundWord">
+               <Item>Toolbar</Item>
+               <Item>field</Item>
+               <Item>Toolbar</Item>
+               <Item>ToolBar</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="4" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="EWSoftware.Web.Design">
+        <Types>
+         <Type Name="AddToFavoritesDesigner">
+          <Members>
+           <Member Name="GetDesignTimeHtml():System.String">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>AddToFavoritesDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="13" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>AddToFavoritesDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.IO.StringWriter.#ctor</Item>
+               <Item>System.IO.StringWriter.#ctor(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DateTextBoxDesigner">
+          <Members>
+           <Member Name="GetDesignTimeHtml():System.String">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>DateTextBoxDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="13" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>DateTextBoxDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.IO.StringWriter.#ctor</Item>
+               <Item>System.IO.StringWriter.#ctor(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EWSControlDesigner">
+          <Messages>
+           <Message TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705" Status="Excluded" Created="2006-02-16 16:32:27Z">
+            <Issue Name="Type">
+             <Item>EWSControlDesigner</Item>
+            </Issue>
+            <Notes>
+             <User Name="EWOODRUFF">
+              <Note Id="7" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="GetDesignTimeHtml():System.String">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSControlDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="13" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSControlDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.IO.StringWriter.#ctor</Item>
+               <Item>System.IO.StringWriter.#ctor(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetErrorDesignTimeHtml(System.Exception):System.String">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>EWSControlDesigner.GetErrorDesignTimeHtml(Exception):String</Item>
+               <Item>System.String.Format(System.String,System.Object,System.Object)</Item>
+               <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FileLinkDesigner">
+          <Members>
+           <Member Name="GetDesignTimeHtml():System.String">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>FileLinkDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="13" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>FileLinkDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.IO.StringWriter.#ctor</Item>
+               <Item>System.IO.StringWriter.#ctor(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowOpenerDesigner">
+          <Members>
+           <Member Name="GetDesignTimeHtml():System.String">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>WindowOpenerDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="13" />
+               </User>
+              </Notes>
+             </Message>
+             <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Excluded" Created="2006-02-16 16:32:27Z">
+              <Issue>
+               <Item>WindowOpenerDesigner.GetDesignTimeHtml():String</Item>
+               <Item>System.IO.StringWriter.#ctor</Item>
+               <Item>System.IO.StringWriter.#ctor(System.IFormatProvider)</Item>
+              </Issue>
+              <Notes>
+               <User Name="EWOODRUFF">
+                <Note Id="2" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Notes>
+   <User Name="EWOODRUFF">
+    <Note Id="0" Modified="2006-02-16 16:33:41Z">Not for this one</Note>
+    <Note Id="1" Modified="2006-02-16 16:44:12Z">It's used to validate the value</Note>
+    <Note Id="2" Modified="2006-02-16 16:45:56Z">Ignore for now.  May review later.</Note>
+    <Note Id="3" Modified="2006-02-16 16:46:49Z">Too much code in use with the existing name</Note>
+    <Note Id="4" Modified="2006-02-16 16:48:34Z">Too much code in use with the existing name</Note>
+    <Note Id="5" Modified="2006-02-16 16:48:42Z">Okay as is</Note>
+    <Note Id="6" Modified="2006-02-16 16:48:54Z">Okay as is</Note>
+    <Note Id="7" Modified="2006-02-16 16:49:04Z">Too much code in use with the existing name</Note>
+    <Note Id="8" Modified="2006-02-16 16:49:15Z">It's a subset of an existing enumeration.</Note>
+    <Note Id="9" Modified="2006-02-16 16:49:38Z">Too much code in use with the existing way of doing it</Note>
+    <Note Id="10" Modified="2006-02-16 16:49:52Z">Okay as is</Note>
+    <Note Id="11" Modified="2006-02-16 16:50:06Z">Too much code in use with the existing name</Note>
+    <Note Id="12" Modified="2006-02-16 16:50:20Z">It's okay as a method</Note>
+    <Note Id="13" Modified="2006-02-16 16:51:04Z">Okay as given</Note>
+    <Note Id="14" Modified="2006-02-16 16:51:19Z">It's a subset of an existing enumeration</Note>
+    <Note Id="15" Modified="2006-02-16 17:13:16Z">It's an enumerator and should be fine</Note>
+    <Note Id="16" Modified="2006-02-16 17:13:56Z">It's an enumerator and should be fine</Note>
+    <Note Id="17" Modified="2006-02-16 17:14:42Z">It is validated</Note>
+    <Note Id="18" Modified="2006-02-16 17:17:44Z">Okay as is</Note>
+   </User>
+  </Notes>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign '{0}' with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010">
+    <Resolution Name="Default">'{0}' appears to be a non-generic, strongly typed collection. Add an implementation to the instance of {1}&lt;T&gt; where T is {0}'s underlying element type.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="ShouldBeCompoundWord">The discrete term '{0}' in {1} '{2}' should be expressed as a compound term, '{3}'.</Resolution>
+    <Resolution Name="ShouldBeDiscreteTerm">The compound word '{0}' in {1} '{2}' exists as a discrete term. If your usage is intended to be single word, case it as '{3}'.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify '{0}' to catch a more specific exception than '{1}' or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+    <Resolution Name="NotFlagsNoZeroValue">Add a member to '{0}' that has a value of zero with a suggested name of 'None'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of member name '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="LiteralsShouldBeSpelledCorrectly" Category="Microsoft.Usage" CheckId="CA2204">
+    <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="LongAcronymsShouldBePascalCased" Category="Microsoft.Naming" CheckId="CA1705">
+    <Resolution Name="Member">Correct the capitalization of member name '{0}'.</Resolution>
+    <Resolution Name="Parameter">Correct the capitalization of parameter name '{0}'.</Resolution>
+    <Resolution Name="Type">Correct the capitalization of type name '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkEnumsWithFlags" Category="Microsoft.Design" CheckId="CA1027">
+    <Resolution Name="Default">The constituent members of '{0}' appear to represent flags that can be combined rather than discrete values. If this is correct, mark the enumeration with FlagsAttribute.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044">
+    <Resolution Name="Default">Add a property getter to '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+    <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a local, '{1}', of type {2}, which is never used or is only assigned to. Use this local or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewVisibleEventHandlers" Category="Microsoft.Security" CheckId="CA2109">
+    <Resolution Name="Security">Consider making {0} not externally visible or ensure that it is benign code.</Resolution>
+   </Rule>
+   <Rule TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706">
+    <Resolution Name="Member">Correct the capitalization of '{0}' in member name '{1}'.</Resolution>
+    <Resolution Name="MemberId">'Id' is an abbreviation and therefore is not subject to acronym casing guidelines. Correct the capitalization of 'ID' in member name '{0}' by changing it to 'Id'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+    <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide a CultureInfo. This should be replaced with a call to {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide an IFormatProvider. This should be replaced with a call to {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+    <Resolution Name="Member">Replace the term '{0}' in member name '{1}' with the preferred alternate '{2}'.</Resolution>
+    <Resolution Name="Parameter">In method {0}, replace the term '{1}' in parameter name '{2}' with the preferred alternate '{3}'.</Resolution>
+    <Resolution Name="Type">Replace the term '{0}' in type name '{1}' with the preferred alternate '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change '{0}' to a property if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062">
+    <Resolution Name="Default">Validate parameter {0} passed to externally visible method {1}.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

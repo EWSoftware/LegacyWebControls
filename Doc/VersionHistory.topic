@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE bodyText [
+    <!ENTITY nbsp "&#160;">
+]>
+
+<topic xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <title>Version History</title>
+    <styleSheet filename="Styles/Styles.css" />
+    <bodyText>
+<table class="dtTABLE" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td valign="top" width="100px">01/07/2008</td>
+    <td><b>2.0.0.2</b> - Fixed a bug in the <code>DateTextBox</code> control
+that caused it to parse the years "08" and "09" incorrectly.  The
+documentation is now being generated with
+<a href="http://www.codeplex.com/SHFB" target="_blank">The Sandcastle Help File
+Builder</a>.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="100px">02/16/2006</td>
+    <td><b>2.0.0.0</b> - Rebuilt for use with .NET 2.0.  The following
+changes have been made.  Some of them are breaking changes as indicated.
+
+<ul>
+<li>The method of embedding the script resources was changed to use the
+.NET 2.0 method so it is no longer necessary to add the <code>httpHandlers</code>
+section for the <b>EWSoftware.Web.Controls.aspx</b> resource page.  As such,
+this section must be deleted from your <b>Web.config</b> file.</li>
+<li><b>Breaking Change</b>: The <code>DefaultSelectedEventHandler</code>
+delegate has been removed from <code>EWSDropDownList</code>,
+<code>EWSRadioButtonList</code>, <code>EWSListBox</code>, and
+<code>EWSCheckBoxList</code>.  To add an event handler for this event use the
+standard <code>EventHandler</code> type instead.  For example:
+
+<pre lang="cs">
+this.cboDropDown.DefaultSelected += new EventHandler(
+    this.cboDropDown_DefaultSelected);
+</pre>
+</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td valign="top" width="100px">10/26/2003</td>
+    <td>Various minor updates.  The <code>MinimumValue</code> and
+<code>MaximumValue</code> properties of the <code>DateTextBox</code> class are
+now obsolete.  Use the <code>MinimumDate</code> and <code>MaximumDate</code>
+properties instead.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="100px">09/04/2003</td>
+    <td>Added the <code>WindowOpener</code> control.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="100px">07/05/2003</td>
+    <td>Moved some of the <code>EWSoftware.Web.Controls.CtrlUtils</code> code
+to the <code>EWSoftware.Web.PageUtils</code> class as it's a better fit there
+and wasn't being used anywhere in the control library. Used
+<a href="http://ndoc.sourceforge.net" target="_blank">NDOC</a> to generate
+a help file off of the XML comments in the source files.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="100px">01/22/2003</td>
+    <td>Initial release.</td>
+  </tr>
+</table>
+    </bodyText>
+</topic>
+<!-- @SortOrder 2 -->

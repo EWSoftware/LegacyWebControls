@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE bodyText [
+    <!ENTITY nbsp "&#160;">
+]>
+
+<topic xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <title>Usage Notes</title>
+    <styleSheet filename="Styles/Styles.css" />
+    <bodyText>
+<ul>
+<li><a href="#Compress">Script Compression</a></li>
+<li><a href="#UseAsm">Using the Assembly in Your Projects</a></li>
+<li><a href="#Install">Installing the Controls in the Visual Studio .NET
+Toolbox</a></li>
+</ul>
+<hr/>
+
+This library contains several ASP.NET web server controls that implement
+features missing from the basic ASP.NET web server controls or extend the
+existing controls in various ways.
+
+<h2><a class="Reference" name="Compress">Script Compression</a></h2>
+The scripts are compressed during the build step for the project using the
+JavaScript compressor described in the <b>Code Project</b> article
+<a href='http://www.codeproject.com/KB/cs/jscompress.aspx' target="_blank">A
+JavaScript Compression Tool for Web Applications</a>. This reduces the size of
+the scripts by removing comments and extraneous whitespace so that they take
+up less space.  If you'd prefer to not use script compression, you can remove
+it from the pre-build step by opening the project, right click the project
+name in the <b>Solution Explorer</b>, select <b>Properties</b>, expand the
+<b>Common Properties</b> folder, and select the <b>Build Events</b> sub-item.
+Click in the <b>Pre-build Event Command Line</b> option and delete the command
+line that you see there.  Copy the scripts from the <b>ScriptsDev</b> folder
+to the <b>Scripts</b> folder to replace the existing compressed versions
+distributed with the library.  The <b>ScriptsDev</b> folder can be deleted
+from the project if not using the compressor.
+
+<h2><a class="Reference" name="UseAsm">Using the Assembly in Your 
+Projects</a></h2>
+The classes can be found in the assembly <b>EWSoftware.Web.Controls.dll</b>.
+In order to use the classes, copy this file to a folder on your hard drive
+or a network share and add a reference to it in your project.  To add the
+reference, open your project in Visual Studio .NET, open the <b>Solution
+Explorer</b> pane of the project, right click on the <b>References</b>
+folder, select <b>Add Reference...</b>, click the <b>Browse</b> button
+and navigate to the folder in which you placed the assembly, and finally
+select the <b>EWSoftware.Web.Controls.dll</b> file and click <b>OK</b>
+to close the dialogs and add the reference.
+
+<p/>In code modules that use classes from the <code>EWSoftware.Web.Controls</code>
+namespace, you will have to add the "<code>using EWSoftware.Web.Controls;</code>"
+statement ("<code>Imports EWSoftware.Web.Controls</code>" in VB.NET).
+
+<h2><a class="Reference" name="Install">Installing the Controls in the
+Visual Studio .NET Toolbox</a></h2>
+Installing the control library in the Visual Studio .NET toolbox will
+allow you to use the controls at design time by dragging them from the
+toolbox and dropping them on to your form.  To install it for the first
+time or to refresh the toolbox after the control library has been
+updated, do the following:
+
+<ul>
+<li>Open the toolbox window.  Right click on it and select the <b>Show All
+Tabs</b> option.</li>
+<li>If you don't currently have a tab for the control library, create
+one by right clicking on the toolbox window, selecting <b>Add Tab</b>,
+and then typing in a name for the tab such as <b>EWSoftware Web Controls</b>.</li>
+<li>Click on the tab for the control library so that it is selected.</li>
+<li>If the tab is not empty, remove the existing controls by doing the
+following:
+    <ul>
+        <li>Right click on the toolbox tab and select <b>Customize Toolbox</b>.</li>
+        <li>In the dialog box that opens, select the <b>.NET Framework
+Components</b> tab.  Click on the <b>Namespace</b> header to sort the list of
+controls by namespace.</li>
+        <li>Locate the <b>EWSoftware.Web.Controls</b> namespace and
+uncheck all of the controls in that namespace.</li>
+        <li>Click the <b>OK</b> button and the controls will be removed
+from the toolbox.  You are now ready to add the new version of the
+control library.</li>
+    </ul></li>
+
+<li>To add the controls to the toolbox tab, do the following:
+    <ul>
+        <li>Right click on the toolbox tab and select <b>Customize Toolbox</b>.</li>
+        <li>In the dialog box that opens, select the <b>.NET Framework
+Components</b> tab.  Click on the <b>Namespace</b> header to sort the list of
+controls by namespace.</li>
+        <li>Click on the <b>Browse</b> button and navigate out to where the
+<b>EWSoftware.Web.Controls.dll</b> is stored.  Select it and click the
+<b>Open</b> button.  This will add the controls in the library to the
+list in the dialog box.  They will all be selected and checked by
+default.</li>
+        <li>Click the <b>OK</b> button to complete the process and the
+new controls will appear in the toolbox tab.</li>
+    </ul></li>
+</ul>
+    </bodyText>
+</topic>
+<!-- @DefaultTopic --><!-- @SortOrder 1 -->

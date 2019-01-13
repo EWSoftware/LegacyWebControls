@@ -1,0 +1,6 @@
+//=============================================================================
+// File    : SelectIncrSearch.js
+// Author  : Eric Woodruff  (Eric@EWoodruff.us)
+// Updated : 10/27/2003
+var SIS_strSearchText = "", SIS_bChanged = false;
+function SIS_OnKeyDown(a,b){var c,d,e=true;switch(b){case 8:SIS_strSearchText=SIS_strSearchText.substr(0,SIS_strSearchText.length-1);SIS_OnKeyPress(a,0);e=false;break;case 33:case 34:case 35:case 36:case 38:case 40:SIS_strSearchText="";break;case 27:case 46:SIS_strSearchText="";for(c=d=0;c<a.options.length;c++)if(a.options[c].defaultSelected){d=c;break;}a.selectedIndex=d;break;default:break;}return e;}function SIS_OnKeyPress(a,b){var f,g;if(b==0)f="";else f=String.fromCharCode(b);g=new RegExp("^"+SIS_strSearchText+f,"i");for(var c=0;c<a.options.length;c++)if(g.test(a.options[c].text)){SIS_bChanged=true;a.selectedIndex=c;SIS_strSearchText+=f;break;}return false;}function SIS_OnBlur(a){if(SIS_bChanged==true)window.setTimeout(a.AutoPostBack,0,'JavaScript');}function SIS_OnChange(){SIS_bChanged=true;}

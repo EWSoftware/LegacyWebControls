@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The application menu.  See AppMenu.xsd for the schema. -->
+<AppMenu>
+  <MenuItem>
+    <MenuText>General</MenuText>
+    <MenuLink>General.aspx</MenuLink>
+    <MenuTip>General Input Controls</MenuTip>
+  </MenuItem>
+  <MenuItem>
+    <MenuText>Data Types</MenuText>
+    <MenuLink>DataTypes.aspx</MenuLink>
+    <MenuTip>Data Type Input Controls</MenuTip>
+  </MenuItem>
+  <MenuItem>
+    <MenuText>Pattern</MenuText>
+    <MenuLink>Pattern.aspx</MenuLink>
+    <MenuTip>Pattern Text Box</MenuTip>
+  </MenuItem>
+  <MenuItem>
+    <MenuText>Mask</MenuText>
+    <MenuLink>Mask.aspx</MenuLink>
+    <MenuTip>Mask Text Box</MenuTip>
+  </MenuItem>
+  <MenuItem>
+    <MenuText>List Controls</MenuText>
+    <MenuLink>ListControls.aspx</MenuLink>
+    <MenuTip>List Controls</MenuTip>
+  </MenuItem>
+  <MenuItem>
+    <MenuText>Utilities</MenuText>
+    <MenuLink>Utilities.aspx</MenuLink>
+    <MenuTip>Utility Methods</MenuTip>
+  </MenuItem>
+  <MenuItem>
+    <MenuText>About</MenuText>
+    <MenuLink>EWSCtlDemo.aspx</MenuLink>
+    <MenuTip>About EWSoftware.Web.Controls</MenuTip>
+  </MenuItem>
+</AppMenu>

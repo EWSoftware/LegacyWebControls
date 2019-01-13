@@ -1,0 +1,186 @@
+<Controls>
+    <DateTextBox>
+        <Member name="Class">
+<remarks>
+
+<h4>Date Fields and Calendar Popup Help</h4>
+Date fields support entry of values without the separators. The
+fields will automatically attempt to determine the proper placement of
+the separators and insert them for you.  For example, if you enter
+"102603", it will be reformatted to "10/26/2003".  Date fields also have
+a popup calendar that can be accessed by double clicking the date field
+or single clicking the calendar icon to the right of the date field as
+shown here:<br/><br/>
+
+<img src="../Images/Calendar.bmp" alt="Calendar Popup Icon" />
+
+<p/>Date fields also support the following special key presses:
+<ul>
+<li><b>T</b> - Insert today's date</li>
+<li><b>P</b> - Invoke the calendar popup</li>
+<li><b>Page Up</b> - Add a month the date in the field</li>
+<li><b>Page Down</b> - Subtract a month from the date in the field</li>
+<li><b>Home</b> - Add a year to the date in the field</li>
+<li><b>End</b> - Subtract a month from the date in the field</li>
+<li><b>Up Arrow</b> - Add a day to the date in the field</li>
+<li><b>Down Arrow</b> - Subtract a day from the date in the field</li>
+</ul>
+
+<p/>To select a date from the calendar popup, just click on one of the
+numbered cells.  To cancel the popup without selecting a date, click the
+"X" in the upper right corner or hit the Escape key.  The popup has
+dropdown lists that can be used to select a different month and year as
+well as the following controls in the top row to navigate in the
+calendar:
+
+<ul>
+<li><b>&lt;&lt;</b> Previous year</li>
+<li><b>&lt;</b> Previous month</li>
+<li><b>*</b> - Go to today's month</li>
+<li><b>&gt;</b> - Next month</li>
+<li><b>&gt;&gt;</b> - Next year</li>
+</ul>
+
+<p/>The date selected on entry is highlighted in blue.
+
+</remarks>
+        </Member>
+    </DateTextBox>
+
+    <NumericTextBox>
+        <Member name="Class">
+<remarks>
+Numeric fields that have decimal places support entry of values without
+the decimal point. The fields will automatically attempt to determine
+the proper placement of the decimal point and insert it for you.  For
+example, if you enter "10" and the field has three decimal places, it
+will be reformated to "10.000".  If you enter "10.1", it will be
+reformatted to "10.100".  If the <b>InsertDecimal</b> property is set to
+true, the decimal point will be inserted into the number rather than the
+decimal places being appended.  For example, entering "10" or "101"
+would result in the number being reformatted to "0.010" or "0.101"
+respectively if the decimal places property were set to three.
+
+</remarks>
+        </Member>
+    </NumericTextBox>
+
+    <PatternTextBox>
+        <Member name="Class">
+<remarks>
+<h4>The Phone Number, SSN, Time, and Zip Code Patterns</h4>
+Fields using the <b>Phone</b>, <b>PhoneNoExt</b>, <b>AreaPhone</b>,
+<b>AreaPhNoExt</b>, <b>SSN</b>, <b>Time</b>, <b>ZIP</b>, or <b>ZIP4</b>
+patterns support entry of values without the separators. The fields will
+automatically attempt to determine the proper placement of the
+separators and insert them for you.  For example, if you enter "1530" in
+a time field, it will be reformatted to "15:30" when you exit the field.
+If you enter "2pm", it will be reformatted to "02:00pm".  If you enter
+"999121234" into an SSN field, it will be reformatted to "999-12-1234".
+
+<p/>Time fields also support the following special key presses:
+<ul>
+<li><b>N</b> - Insert the current time</li>
+<li><b>Page Up</b> - Add an hour to the time in the field</li>
+<li><b>Page Down</b> - Subtract an hour from the time in the field</li>
+<li><b>Up Arrow</b> - Add a minute to the time in the field</li>
+<li><b>Down Arrow</b> - Subtract a minute from the time in the field</li>
+</ul>
+
+</remarks>
+        </Member>
+    </PatternTextBox>
+    <MaskTextBox>
+        <Member name="Class">
+<remarks>
+The <b>MaskTextBox</b> is similar to the <see cref="PatternTextBox"/> when
+used with its <b>Custom</b> pattern type.  The difference is that the
+<b>MaskTextBox</b> allows you to specify a mask rather than a regular
+expression to define the validation pattern.  This makes it easier to
+use than the <b>PatternTextBox</b> with the <b>Custom</b> pattern type.
+In addition, mask characters are automatically inserted as the user
+types text into the control when rendered on Internet Explorer.  See the
+<see cref="Mask"/> property for the mask special characters and their
+meanings.
+</remarks>
+        </Member>
+        <Member name="Mask">
+<remarks>
+The following mask characters can be used in the mask string.  The
+control uses mask characters similar to those found in Microsoft Access.
+<br/><br/>
+<list type="table">
+    <listheader>
+        <term>Mask Character</term>
+        <description>Description</description>
+    </listheader>
+    <item>
+        <term>\ (backslash)</term>
+        <description>Causes the character that follows to be displayed as
+the literal character.  For example, \A is displayed as just A.  To
+include a literal backslash in the mask, use \\.</description>
+    </item>
+    <item>
+        <term>0</term>
+        <description>Digit 0 to 9, entry required, plus [+] and minus [-]
+signs not allowed.</description>
+    </item>
+    <item>
+        <term>9</term>
+        <description>Digit or space, entry optional, plus and minus signs
+not allowed.</description>
+    </item>
+    <item>
+        <term>#</term>
+        <description>Digit or space, entry optional, plus and minus signs
+allowed.</description>
+    </item>
+    <item>
+        <term>L</term>
+        <description>Letter A to Z or a to z, entry required.</description>
+    </item>
+    <item>
+        <term>?</term>
+        <description>Letter A to Z or a to z, entry optional.</description>
+    </item>
+    <item>
+        <term>A</term>
+        <description>Letter or digit, entry required.</description>
+    </item>
+    <item>
+        <term>a</term>
+        <description>Letter or digit, entry optional.</description>
+    </item>
+    <item>
+        <term>&amp;</term>
+        <description>Any character, entry required.</description>
+    </item>
+    <item>
+        <term>C</term>
+        <description>Any character, entry optional.</description>
+    </item>
+</list>
+
+<p/>The mask characters that indicate that entry is optional can be left
+off of text entered into the control as long as no literal characters or
+mask characters that have required entry behavior follow them.  For
+example, in the mask "aA", the "a" position is actually a required
+character because the "A" mask character following it requires entry.
+
+<p/>On a similar note, in a sequence of optional entry mask characters,
+only trailing characters can be omitted from the entered text.  For
+example, in the mask "##C", the two "#" mask character entries must be
+made before the "C" mask character entry can be made.
+
+<p/>If a literal character preceeds a sequence of optional characters, it
+will be appended to the text of the control.  For example, if the mask
+"00000-9999" is used, if the user enters "12345", the literal "-" will
+be appended resulting in the text "12345-" being returned.  If you do
+not want the trailing literal character, you must remove it yourself.
+This is necessary as the control cannot determine for itself whether a
+literal is an optional or required part of the mask.
+
+</remarks>
+        </Member>
+    </MaskTextBox>
+</Controls>

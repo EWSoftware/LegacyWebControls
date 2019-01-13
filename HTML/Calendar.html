@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!--
+//=============================================================================
+// System  : ASP.NET Web Control Library
+// File    : Calendar.html
+// Author  : Eric Woodruff  (Eric@EWoodruff.us)
+// Updated : Sat 04/12/03 18:43:27
+// Note    : Copyright 2003, Eric Woodruff, All rights reserved
+// Compiler: JavaScript
+//
+// This file contains the HTML and JavaScript used to implement the popup
+// calendar for the DateTextBox control.  The file is executed as a modal
+// dialog box (Internet Explorer only).  Prev and Next links at the top
+// allow the user to navigate to the previous and next months.  The dropdown
+// lists at the top allow the user to jump to a specific month and year.
+// To select a particular date and close the dialog box, the user clicks on
+// one of the day numbers.  Pressing Escape or clicking the close icon will
+// close the popup without selecting a date.
+//
+// Version     Date     Who  Comments
+// ============================================================================
+// 1.0.0    04/12/2003  EFW  Created the code
+//=============================================================================
+-->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Calendar</title>
+
+<!-- Calendar style sheet -->
+<style>
+SELECT
+{
+    font-size: 7pt;
+    font-family: Arial, sans-serif;
+	font-weight : bold;
+}
+.calHead
+{
+	font-size : 7pt;
+	font-family : Arial, sans-serif;
+	font-weight : bold;
+	font-style : normal;
+	color : white;
+	background-color : #4e5f91;
+}
+.calNavLink
+{
+	font-size : 10pt;
+    font-family: Verdana, Arial, sans-serif;
+    text-decoration: underline;
+    cursor: hand;
+}
+.calDayLink
+{
+    text-decoration: underline;
+    cursor: hand;
+}
+.calBlank
+{
+    font-size: 7pt;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: white;
+}
+.calDays
+{
+	font-size : 7pt;
+	font-family : Arial, sans-serif;
+	font-weight : Bold;
+	font-style : normal;
+	color : white;
+	background-color : RoyalBlue;
+}
+.calStartDay
+{
+	font-size : 7pt;
+	font-family : Arial, sans-serif;
+	font-weight : bold;
+	font-style : normal;
+	color : white;
+	background-color : MediumBlue;
+}
+.calToday
+{
+	font-size : 7pt;
+	font-family : Arial, sans-serif;
+	font-weight : bold;
+	font-style : normal;
+	color : black;
+	background-color : lightgrey;
+}
+.calOtherDay
+{
+	font-size : 7pt;
+	font-family : Arial, sans-serif;
+	font-weight : normal;
+	font-style : normal;
+	color : black;
+	background-color : lightgrey;
+}
+.calWeekend
+{
+	font-size : 7pt;
+	font-family : Arial, sans-serif;
+	font-weight : normal;
+	font-style : normal;
+	color : black;
+	background-color : darkgray;
+}
+</style>
+
+<script type="text/javascript">
+
+// Day and month labels and the number of days in each month
+var strDays = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+
+var strMonths = new Array('', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+
+var nDaysInMonth = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+// This will hold the HTML for the month and year dropdown lists and the days
+// of the week headings.  They only need to be built once.
+var strMMYYHTML = "", strDOWHTML;
+
+// Minimum and maximum year.  If exceeded, they combo boxes will be reloaded
+// with a new minimum and maximum.
+var nMinYear = 1970, nMaxYear = 2030;
+
+// This is used to highlight the starting date on which the calendar opens
+var dtStart;
+
+// Format the selected date and pass it back to the calling form
+function funSelectDate(nMonth, nDay, nYear)
+{
+	if(nMonth.toString().length == 1)
+        nMonth = "0" + nMonth;
+
+	if(nDay.toString().length == 1)
+        nDay = "0" + nDay;
+
+    window.returnValue = nMonth + "/" + nDay + "/" + nYear;
+	window.close();
+}
+
+// Build and display the calendar for the specified month and year
+function funBuildCalendar(nCurrMonth, nCurrYear)
+{
+    var nIdx, nStartDay, nStartMonth, nStartYear, nNextYear, nPrevYear,
+        nNextMonth, nPrevMonth, nFirstDOW, strCal, nDayCount, nWeek, nDOW,
+        nTodayMonth, nTodayYear, dtToday = new Date();
+
+    nStartDay = dtStart.getDate();
+    nStartMonth = dtStart.getMonth() + 1;
+    nStartYear = dtStart.getFullYear();
+    nTodayDay = dtToday.getDate();
+    nTodayMonth = dtToday.getMonth() + 1;
+    nTodayYear = dtToday.getFullYear();
+
+    // Convert parameters from strings to numeric values?
+    if(typeof(nCurrMonth) == "string")
+        nCurrMonth = parseInt(nCurrMonth);
+
+    if(typeof(nCurrYear) == "string")
+        nCurrYear = parseInt(nCurrYear);
+
+    // First call?  If so, default to current date.
+	if(nCurrMonth < 1 || nCurrMonth > 12)
+    {
+		nCurrMonth = nStartMonth;
+		nCurrYear = nStartYear;
+	}
+
+    // Adjust minimum and maximum year?
+    if(nCurrYear < nMinYear)
+    {
+        nMinYear = nCurrYear - 30;
+        strMMYYHTML = "";
+    }
+
+    if(nCurrYear > nMaxYear)
+    {
+        nMaxYear = nCurrYear + 30;
+        strMMYYHTML = "";
+    }
+
+    // Calculate previous month and year
+	if(nCurrMonth == 1)
+    {
+		nPrevMonth = 12;
+		nPrevYear = nCurrYear - 1;
+	}
+    else
+    {
+		nPrevMonth = nCurrMonth - 1;
+		nPrevYear = nCurrYear;
+	}
+
+    // Calculate next month and year
+	if(nCurrMonth == 12)
+    {
+		nNextMonth = 1;
+		nNextYear = nCurrYear + 1;
+	}
+    else
+    {
+		nNextMonth = nCurrMonth + 1;
+		nNextYear = nCurrYear;
+	}
+
+    // Get first day of the week
+	nFirstDOW = new Date(nCurrYear, nCurrMonth - 1, 1).getDay();
+
+    // Adjust month array for a leap year
+	if(nCurrMonth == 2)
+    {
+        if((nCurrYear % 4 == 0 && nCurrYear % 100 != 0) || nCurrYear % 400 == 0)
+            nDaysInMonth[nCurrMonth] = 29;
+        else
+            nDaysInMonth[nCurrMonth] = 28;
+	}
+
+    // Create the month and year dropdown list HTML and days of the week
+    // HTML if not done already.
+    if(strMMYYHTML == "")
+    {
+	    strMMYYHTML = "<td colspan='5' class='calHead'>" +
+            "&nbsp;&nbsp;<select id='cboMonth' " +
+            "onchange='funBuildCalendar(cboMonth.options[" +
+            "cboMonth.selectedIndex].value, cboYear.options[" +
+            "cboYear.selectedIndex].value)'>";
+
+    	for(nIdx = 1; nIdx < 13; nIdx++)
+	        strMMYYHTML += "<option value='" + nIdx + "'>" +
+                strMonths[nIdx] + "</option>";
+
+        strMMYYHTML += "</select>&nbsp;<a class='calNavLink' onclick='" +
+            "javascript: funBuildCalendar(" + nTodayMonth + ", " +
+            nTodayYear + ")' title='Today'>&nbsp;*&nbsp;</a>";
+
+	    strMMYYHTML += "&nbsp;&nbsp;<select id='cboYear' " +
+            "onchange='funBuildCalendar(cboMonth.options[" +
+            "cboMonth.selectedIndex].value,cboYear." +
+            "options[cboYear.selectedIndex].value)'>";
+
+    	for(nIdx = nMinYear; nIdx <= nMaxYear; nIdx++)
+            strMMYYHTML += "<option value='" + nIdx + "'>" +
+                nIdx + "</option>";
+
+    	strMMYYHTML += "</select></td>";
+
+        strDOWHTML = "<tr align='center'>"
+
+    	for(nIdx = 0; nIdx < 7; nIdx++)
+    	    strDOWHTML += "<td width='14%' class='calDays'>&nbsp;" +
+                strDays[nIdx] + "&nbsp;</td>";
+
+    	strDOWHTML += "</tr>";
+    }
+
+    // Create table and calendar navigation controls
+	strCal = "<table border='0' cellspacing='2' width='250'>" +
+        "<tr class='calHead' align='center'><td><a class='calNavLink' " +
+        "onclick='javascript: funBuildCalendar(" + nCurrMonth + ", " +
+        (nCurrYear - 1) + ")' title='Prev Year'>&laquo;</a>&nbsp;&nbsp;"
+    strCal += "<a class='calNavLink' onclick='javascript: funBuildCalendar(" +
+        nPrevMonth + ", " + nPrevYear + ")' title='Prev Month'>&lsaquo;&nbsp;</a></td>" +
+        strMMYYHTML + "<td><a class='calNavLink' onclick='javascript: " +
+        "funBuildCalendar(" + nNextMonth + ", " + nNextYear +
+        ")' title='Next Month'>&nbsp;&rsaquo;</a>&nbsp;&nbsp;"
+    strCal += "<a class='calNavLink' onclick='javascript: funBuildCalendar(" +
+        nCurrMonth + ", " + (nCurrYear + 1) + ")' title='Next Year'>" +
+        "&raquo;</a></td></tr>" + strDOWHTML;
+
+    // Create the week rows
+    nDayCount = 1;
+	for(nWeek = 0; nWeek < 6; nWeek++)
+		if(nDayCount <= nDaysInMonth[nCurrMonth])
+        {
+			strCal += "<tr align='center'>";
+
+            // Display each day of the week as a link
+			for(nDOW = 0; nDOW < 7; nDOW++)
+            {
+                // Display blanks prior to first day and after last day
+				if((nWeek == 0 && nDOW < nFirstDOW) ||
+                  nDayCount > nDaysInMonth[nCurrMonth])
+				    strCal += "<td width='14%' class='calBlank'>&nbsp;</td>";
+				else
+                {
+                    if(nDayCount == nStartDay && nCurrMonth == nStartMonth &&
+                      nCurrYear == nStartYear)
+                    {
+                        // Starting date's cell
+    					strCal += "<td width='14%' class='calStartDay'>"
+	    			}
+                    else
+                        if(nDayCount == nTodayDay &&
+                          nCurrMonth == nTodayMonth && nCurrYear == nTodayYear)
+                        {
+                            // Today's date cell
+		    			    strCal += "<td width='14%' class='calToday'>"
+        				}
+                        else
+                        {
+                            // Weekend and all other day cells
+                            if(nDOW == 0 || nDOW == 6)
+		    			        strCal += "<td width='14%' class='calWeekend'>"
+                            else
+		    			        strCal += "<td width='14%' class='calOtherDay'>"
+        				}
+
+                    strCal +=  "<a class='calDayLink' onclick='javascript:" +
+                        "funSelectDate(" + nCurrMonth + "," + nDayCount +
+                        "," + nCurrYear + ")'>" + nDayCount + "</a></td>";
+				    nDayCount++;
+                }
+			}
+
+			strCal += "</tr>";
+		}
+
+	strCal += "</table>";
+
+    // Display the calendar and set the selected month and year
+    document.getElementById("spnCal").innerHTML = strCal;
+    document.getElementById("cboMonth").selectedIndex = nCurrMonth - 1;
+    document.getElementById("cboYear").selectedIndex = nCurrYear - nMinYear;
+}
+
+// Check for close request (escape key)
+function funCheckForClose()
+{
+    if(event.keyCode == 27)
+    {
+        window.close();
+        return false;
+    }
+
+    return true;
+}
+
+</script>
+</head>
+
+<body onkeyup="javascript: return funCheckForClose()">
+
+<span id="spnCal"></span>
+
+<script type="text/javascript">
+
+// If the passed parameter is invalid, use today's date as the starting point
+dtStart = new Date(window.dialogArguments);
+
+if(isNaN(dtStart))
+    dtStart = new Date();
+
+funBuildCalendar(dtStart.getMonth() + 1, dtStart.getFullYear());
+
+</script>
+
+</body>
+
+</html>

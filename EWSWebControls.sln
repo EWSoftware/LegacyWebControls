@@ -1,0 +1,70 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWSWebControls", "EWSWebControls.csproj", "{0A64C069-1982-48EF-A91B-3082085EB147}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EWSControlsDemo", "EWSControlsDemo\", "{77A912E9-EF7E-446C-B7AF-57771782C903}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{0A64C069-1982-48EF-A91B-3082085EB147}|EWSoftware.Web.Controls.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/EWSControlsDemo"
+		Debug.AspNetCompiler.PhysicalPath = "EWSControlsDemo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\EWSControlsDemo\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/EWSControlsDemo"
+		Release.AspNetCompiler.PhysicalPath = "EWSControlsDemo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\EWSControlsDemo\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60402"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{0A64C069-1982-48EF-A91B-3082085EB147} = {0A64C069-1982-48EF-A91B-3082085EB147}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Release|.NET.ActiveCfg = Release|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A64C069-1982-48EF-A91B-3082085EB147}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Debug|.NET.Build.0 = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|.NET.Build.0 = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9607431-4D2D-4259-8226-3E5FC2D3DF11}
+	EndGlobalSection
+EndGlobal
