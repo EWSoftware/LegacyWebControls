@@ -12,8 +12,7 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>EWSoftware.Web.Controls</AssemblyName>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>EWSWebControls.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -89,6 +88,9 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -194,13 +196,6 @@
     <Compile Include="WindowOpener.cs">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="ScriptsDev\CCValidator.js" />
-    <None Include="ScriptsDev\DateTextBox.js" />
-    <None Include="ScriptsDev\MinMaxListValidator.js" />
-    <None Include="ScriptsDev\NumericTextBox.js" />
-    <None Include="ScriptsDev\PatternTextBox.js" />
-    <None Include="ScriptsDev\SelectIncrSearch.js" />
-    <Content Include="ScriptsDev\MaskTextBox.js" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
@@ -222,9 +217,13 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="EWSWebControls.snk" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>"$(ProjectDir)JSCompressCL" /$(ConfigurationName) /v /o:"$(ProjectDir)Scripts" "$(ProjectDir)ScriptsDev\*.js"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>

@@ -2,8 +2,8 @@
 // System  : ASP.NET Web Control Library
 // File    : AssemblyInfo.cs
 // Author  : Eric Woodruff  (Eric@EWoodruff.us)
-// Updated : 09/30/2010
-// Note    : Copyright 2002-2010, Eric Woodruff, All rights reserved
+// Updated : 01/14/2019
+// Note    : Copyright 2002-2019, Eric Woodruff, All rights reserved
 // Compiler: Microsoft Visual C#
 //
 // ASP.NET Web Control Library developed by Eric Woodruff
@@ -30,7 +30,7 @@ using System.Web.UI;
 [assembly: AssemblyDescription("A collection of useful web control classes")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Eric Woodruff (Eric@EWoodruff.us)")]
-[assembly: AssemblyCopyright("Copyright \xA9 2002-2010, Eric Woodruff, All Rights Reserved")]
+[assembly: AssemblyCopyright("Copyright \xA9 2002-2019, Eric Woodruff, All Rights Reserved")]
 [assembly: AssemblyTrademark("Eric Woodruff, All Rights Reserved")]
 [assembly: AssemblyCulture("")]
 [assembly: CLSCompliant(true)]

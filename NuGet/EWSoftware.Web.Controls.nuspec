@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>EWSoftware.Web.Controls</id>
+		<version>3.0.0.0</version>
+		<title>EWSoftware Web Controls Library</title>
+		<authors>Eric Woodruff</authors>
+		<owners>Eric Woodruff</owners>
+		<licenseUrl>https://github.com/EWSoftware/LegacyWebControls/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/EWSoftware/LegacyWebControls</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>This library contains various web controls.</description>
+		<copyright>Eric Woodruff (c) 2002-2019</copyright>
+		<tags>web page classes controls</tags>
+	</metadata>
+	<files>
+		<file src="..\bin\Release\*.*" target="lib\net" />
+	</files>
+</package>

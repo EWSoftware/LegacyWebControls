@@ -2,4 +2,138 @@
 // File    : NumericTextBox.js
 // Author  : Eric Woodruff  (Eric@EWoodruff.us)
 // Updated : 04/09/2003
-function NTB_FormatNumeric(a){var b,c,d=".",e=0,f=false;var g,h,i,j,k=",";if(typeof(a.Validators)!="undefined"){g=a.Validators;for(b=0;b<g.length;b++){if(typeof(g[b].decimalchar)!="undefined")d=g[b].decimalchar;if(typeof(g[b].decplaces)!="undefined")e=parseInt(g[b].decplaces,10);if(typeof(g[b].digits)!="undefined")e=parseInt(g[b].digits,10);if(typeof(g[b].groupchar)!="undefined")k=g[b].groupchar;if(typeof(g[b].insdec)!="undefined")if(g[b].insdec.toLowerCase()=="true")f=true;else f=false;}if(k==d)k=(d==",")?".":"X";}j=new RegExp("[^0-9\\-\\+\\"+k+"\\"+d+"]","g");h=a.value.replace(j,"");if(isNaN(parseFloat(h)))return;i=h.charAt(0);if(i=="-"||i=="+")h=h.substr(1);else i="";while(h.charAt(0)=="0"&&h.charAt(1)!="."&&h.charAt(1)!="")h=h.substr(1);c=h.indexOf(d);if(e==0)h=Math.round(parseFloat(h)).toString();else if(c==-1){if(f==false){h+=d;while(e>0){h+="0";e--;}}else if(h.length>e)h=h.substr(0,h.length-e)+d+h.substr(h.length-e);else{e-=h.length;while(e>0){h="0"+h;e--;}h="0."+h;}}else{if(h.substr(c+1).length>e)h=h.substr(0,c+e+1);else{e-=h.substr(c+1).length;while(e>0){h+="0";e--;}}}if(h.charAt(0)==d)h="0"+h;h=i+h;if(h!=a.value){a.value=h;if(a.onchange!=null)a.onchange();}}
+//
+// This contains code for the NumericTextBox control that formats a numeric
+// value with the correct number of decimal places.  All non-numeric
+// characters and leading zeros are removed.
+
+function NTB_FormatNumeric(ctl)
+{
+    var nIdx, nPos, strDecChar = ".", nDecPlaces = 0, bInsDec = false;
+    var vals, strNum, strSign, reStrip, strGroupChar = ",";
+
+    // Extract the options from the validators if there are any
+    if(typeof(ctl.Validators) != "undefined")
+    {
+        vals = ctl.Validators;
+
+        for(nIdx = 0; nIdx < vals.length; nIdx++)
+        {
+            if(typeof(vals[nIdx].decimalchar) != "undefined")
+                strDecChar = vals[nIdx].decimalchar;
+
+            if(typeof(vals[nIdx].decplaces) != "undefined")
+                nDecPlaces = parseInt(vals[nIdx].decplaces, 10);
+
+			// For currency, "digits" is used instead of "decplaces"
+            if(typeof(vals[nIdx].digits) != "undefined")
+                nDecPlaces = parseInt(vals[nIdx].digits, 10);
+
+            if(typeof(vals[nIdx].groupchar) != "undefined")
+                strGroupChar = vals[nIdx].groupchar;
+
+            if(typeof(vals[nIdx].insdec) != "undefined")
+                if(vals[nIdx].insdec.toLowerCase() == "true")
+                    bInsDec = true;
+                else
+                    bInsDec = false;
+        }
+
+        // Group character is only specified for currency validators.
+        // If not found and it matches the decimal character,
+        // set it to something else so that it won't remove the
+        // decimal character.
+        if(strGroupChar == strDecChar)
+            strGroupChar = (strDecChar == ",") ? "." : "X";
+    }
+
+    // Remove all non-numeric characters
+    reStrip = new RegExp("[^0-9\\-\\+\\" + strGroupChar + "\\" +
+        strDecChar + "]", "g");
+    strNum = ctl.value.replace(reStrip, "");
+
+    // Don't bother for non-numbers, let the validator catch it.
+    if(isNaN(parseFloat(strNum)))
+        return;
+
+    // Remove sign to help with formatting below
+    strSign = strNum.charAt(0);
+    if(strSign == "-" || strSign == "+")
+        strNum = strNum.substr(1);
+    else
+        strSign = "";
+
+    // Strip leading zeros
+    while(strNum.charAt(0) == "0" && strNum.charAt(1) != "." &&
+      strNum.charAt(1) != "")
+        strNum = strNum.substr(1);
+
+    nPos = strNum.indexOf(strDecChar);
+
+    // Strip decimals?
+    if(nDecPlaces == 0)
+        strNum = Math.round(parseFloat(strNum)).toString();
+    else
+        if(nPos == -1)
+        {
+            // No decimals at all, so add them
+            if(bInsDec == false)
+            {
+                strNum += strDecChar;
+                while(nDecPlaces > 0)
+                {
+                    strNum += "0";
+                    nDecPlaces--;
+                }
+            }
+            else
+                if(strNum.length > nDecPlaces)
+                    strNum = strNum.substr(0, strNum.length -
+                        nDecPlaces) + strDecChar +
+                        strNum.substr(strNum.length - nDecPlaces);
+                else
+                {
+                    nDecPlaces -= strNum.length;
+                    while(nDecPlaces > 0)
+                    {
+                        strNum = "0" + strNum;
+                        nDecPlaces--;
+                    }
+
+                    strNum = "0." + strNum;
+                }
+        }
+        else
+        {
+            // Add or remove decimal places
+            if(strNum.substr(nPos + 1).length > nDecPlaces)
+                strNum = strNum.substr(0, nPos + nDecPlaces + 1);
+            else
+            {
+                nDecPlaces -= strNum.substr(nPos + 1).length;
+                while(nDecPlaces > 0)
+                {
+                    strNum += "0";
+                    nDecPlaces--;
+                }
+            }
+        }
+
+    // Add a leading zero if needed
+    if(strNum.charAt(0) == strDecChar)
+        strNum = "0" + strNum;
+
+    // Add back sign if there was one
+    strNum = strSign + strNum;
+
+    if(strNum != ctl.value)
+    {
+        ctl.value = strNum;
+
+        // If there is an on OnChange event, call it.  The ASP.NET
+        // validators hook themselves into this and the unformatted
+        // value may have displayed an error.  This will hide it.
+        if(ctl.onchange != null)
+            ctl.onchange();
+    }
+}

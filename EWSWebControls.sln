@@ -23,10 +23,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EWSControlsDemo", "EWSContr
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "60402"
+		SlnRelativePath = "EWSControlsDemo\"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
 		{0A64C069-1982-48EF-A91B-3082085EB147} = {0A64C069-1982-48EF-A91B-3082085EB147}
 	EndProjectSection
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "EWSoftwareWebControls", "Doc\EWSoftwareWebControls.shfbproj", "{8BD2FE3A-6840-4502-81D6-56513B3FFF53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +63,16 @@ Global
 		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{77A912E9-EF7E-446C-B7AF-57771782C903}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Debug|.NET.Build.0 = Debug|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Release|.NET.ActiveCfg = Release|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Release|.NET.Build.0 = Release|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD2FE3A-6840-4502-81D6-56513B3FFF53}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
