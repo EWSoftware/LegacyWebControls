@@ -6,7 +6,7 @@
 		<title>EWSoftware Web Controls Library</title>
 		<authors>Eric Woodruff</authors>
 		<owners>Eric Woodruff</owners>
-		<licenseUrl>https://github.com/EWSoftware/LegacyWebControls/blob/master/LICENSE</licenseUrl>
+        <license type="expression">MS-PL</license>
 		<projectUrl>https://github.com/EWSoftware/LegacyWebControls</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>This library contains various web controls.</description>
